@@ -6,10 +6,10 @@ Feature: Petals
 	Background:
 		Given I am a registered user	
 	
-	Scenario: Create
+	Scenario: test link Create
 		Given I am on a Front page
 		When I press Create a subreddit
-		Then I should be directed to create subreddit page
+		Then I should be directed to "create subreddit" page
 	
 	Scenario: Filled out Create Subreddit
 		Given I am in create subreddit page

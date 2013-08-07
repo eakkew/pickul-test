@@ -5,6 +5,7 @@ Feature: Comments
 	
 	Scenario: comments
 		Given I am a registered user
-		When I typed my discussion
-		And clicked submit
+		And I am in a discussion section
+		And I typed my discussion with "hello world"
+		When clicked submit
 		Then I should see that my comment is in the comment section of the post

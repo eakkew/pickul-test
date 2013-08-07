@@ -5,7 +5,7 @@ Feature: Sorting
 	
 	Background:
 		Given I am a guest user
-		and I am on front page
+		And I am on front page
 	
 	Scenario: Hot
 		When I select sorting content to hot

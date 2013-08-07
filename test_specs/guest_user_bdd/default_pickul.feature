@@ -9,9 +9,9 @@ Feature: Default subreddit
 	Scenario: Default subreddit
 		When I enter Pickul homepage
 		Then I can see links from default subreddit
-		and I can not see links from non-default subreddit
+		And I can not see links from non-default subreddit
 		
 	Scenario: Frontpage
 		When I press Front page link
 		Then I can see links from default subreddit
-		and I can not see links from non-default subreddit
+		And I can not see links from non-default subreddit

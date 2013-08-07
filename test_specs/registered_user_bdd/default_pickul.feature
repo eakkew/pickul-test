@@ -9,13 +9,23 @@ Feature: Default Pickul
 	Scenario: Default subreddit
 		Given I have not subscribe to any subreddit
 		When I enter Pickul homepage
+<<<<<<< HEAD
 		Then I can only see links from default subreddit
+=======
+		Then I can see links from default subreddit
+		And I cannot see links from non-default subreddit
+>>>>>>> 2ed04a9abe8c482a8a70e9c71bd5a9dcd31256a5
 		
 	Scenario: Default subreddit from link
 		Given I have not subscribe to any subreddit
 		And I am in other pickul room besides front page
 		When I click FRONT link
+<<<<<<< HEAD
 		Then I can only see links from default subreddit
+=======
+		Then I can see links from default subreddit
+		And I cannot see links from non-default subreddit
+>>>>>>> 2ed04a9abe8c482a8a70e9c71bd5a9dcd31256a5
 		
 	Scenario: Subscribe subreddit
 		Given I am on กลีบพิืกุล "newpickulroom" 
@@ -26,4 +36,8 @@ Feature: Default Pickul
 		Given I am on "my subscription" page
 		And I have at least one subreddit subscribed
 		When I unsubcribe that subreddit
+<<<<<<< HEAD
 		Then I cannot see that subreddit on "my subscription" page 
+=======
+		Then I cannot see links from that subreddit when I return to my front page
+>>>>>>> 2ed04a9abe8c482a8a70e9c71bd5a9dcd31256a5

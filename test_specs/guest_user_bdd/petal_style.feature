@@ -15,7 +15,7 @@ Feature: Petal Style
 		When I unchecked the 'use subreddit style'
 		Then I should not see customized subreddit
 		
-	Scenerio: Style unchecked revisited
+	Scenario: Style unchecked revisited
 		Given I navigate to 'pickul.com/r/styletest'
 		And I unchecked the 'use subreddit style'
 		When I reopen my browser

@@ -10,13 +10,13 @@ Feature: Default Pickul
 		Given I have not subscribe to any subreddit
 		When I enter Pickul homepage
 		Then I can see links from default subreddit
-		and I cannot see links from non-default subreddit
+		And I cannot see links from non-default subreddit
 		
 	Scenario: Default subreddit from link
 		Given I have not subscribe to any subreddit
 		When I click FRONT link
 		Then I can see links from default subreddit
-		and I cannot see links from non-default subreddit
+		And I cannot see links from non-default subreddit
 		
 	Scenario: Subscribe subreddit
 		Given I am on a subreddit 'newpickulroom' page

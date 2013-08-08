@@ -6,4 +6,4 @@ Feature: /random
 	Scenario: Random
 		Given I am a guest user
 		When I press 'RANDOM' link
-		Then I should be directed to a random subreddit
+		Then I should be directed to a random subreddit # error NotFound: Subreddit reddit.com

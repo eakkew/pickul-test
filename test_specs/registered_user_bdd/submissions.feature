@@ -4,7 +4,7 @@ Feature: Submissions
 	I want to not be able to submit anything
 	
 	Background:
-		Given I am logged in as 'normalguy'
+		Given I am logged in as 'lovelygentleman'
 	
 	Scenario: test Submit a new link
 		When I press submit a new link

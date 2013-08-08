@@ -1,6 +1,6 @@
 Feature: Submissions
 	In order to validate credibility of the submissions
-	As a programmer
+	As a guest user
 	I want guest user to not be able to submit anything
 	
 	Background:

@@ -20,5 +20,5 @@ Feature: Accessibility
 	
 	Scenario: private subreddit
 		Given I am a guest user
-		When I navigate to 'pickul.com/r/nsfwtest'
-		Then I will be prompt with 'this subreddit is private' page
+		When I navigate to 'http://pickul.com/r/nsfwtest'
+		Then I will be prompt with 'this subreddit is private' page # what is found from "http://reddit.local/r/reddit_private/" is a message "this subreddit is private" and another message from moderator

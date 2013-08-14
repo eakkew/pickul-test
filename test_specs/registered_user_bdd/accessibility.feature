@@ -5,6 +5,12 @@ Feature: Accessibility
 	
 	Background:
 		Given I am a Registered User
+    
+  Scenario: Login as a user to pickul.com
+    Given I enter '#username' with "lovelygentleman" # need to find a real DOM's selector
+    And I enter '#password' with "lovelygentleman" # need to find a real DOM's selector
+    When I click at button labeled '#login' # need to find a real DOM's selector
+    Then I see "lovelygentleman" in 'userbar'
 
 	Scenario: Non-NSFW subreddit - Navigating Subreddit
 		When I enter "pickul.com/r/pickul"

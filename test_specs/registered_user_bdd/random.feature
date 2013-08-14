@@ -5,5 +5,5 @@ Feature: random
 	
 	Scenario: Random
 		Given I am a Registered user
-		When I press 'RANDOM' link
-		Then I should be directed to a random subreddit
+		When I click at the 'RANDOM' link
+		Then I should be directed to a random subreddit # error NotFound: Subreddit reddit.com

@@ -4,11 +4,11 @@ Feature: Default Pickul
 	I want access to all the default subreddit
 	
 	Background:
-		Given I am a Registered user
+		Given I log in as 'lovelygentleman'
 	
 	Scenario: Default subreddit
 		Given I have not subscribe to any subreddit
-		When I enter Pickul homepage
+		When I go to 'http://www.pickul.com'
 		Then I can only see links from default subreddit
 		And I cannot see links from non-default subreddit
 		

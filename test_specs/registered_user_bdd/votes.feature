@@ -1,5 +1,5 @@
 Feature: Votes
-	In order to help curate Pickul's content
+	In order to help curate Pickuls content
 	As a Registered User
 	I want to vote on contents
 	

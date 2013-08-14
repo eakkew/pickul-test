@@ -13,5 +13,5 @@ Feature: petal style
 	
 	Scenario: Style unchecked
 		Given I unchecked the 'use subreddit style' box last time I visit
-		When I reenter subreddit
+		When I reopen my browser
 		Then I should not see customized subreddit

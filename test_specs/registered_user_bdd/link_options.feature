@@ -22,12 +22,12 @@ Feature: Link Options
 		
 	Scenario: Hide a link
 		When I press hide on a link
-		And when I reload the page
+		And I refresh this page
 		Then I will not see the link I just hide
 
 	#todo: cross check with reddit for its behavior
 	Scenario: Hide a link with clean slate
-		When I press hide on a link
+		Given I press hide on a link
 		And my session expired
-		And I revisit the subreddit of that link
+		When I reopen my browser
 		Then I will not see the link I just hide

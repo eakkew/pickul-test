@@ -4,6 +4,6 @@ Feature: r/all
 	I want access to r/all
 	
 	Scenario: All
-		Given I am a Registered user
+		Given I log in as 'lovelygentleman'
 		When I press 'ALL' link
-		Then I should be directed to /r/all subreddit
+		Then I am at 'http://pickul.com/r/all'

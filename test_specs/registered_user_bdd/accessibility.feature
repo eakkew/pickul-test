@@ -40,20 +40,15 @@ Feature: Accessibility
 	Scenario: NSFW subreddit - Age 18 and over
 		Given I go to "pickul.com/r/gonewild"
 		And I am redirected to "age restriction confirmation" page
-		When I press yes confirming that I am over 18 and over
+		When I click at the 'yes' button
 		Then I can see the contents in that subreddit
 	
 	Scenario: NSFW subreddit - Age under 18
 		Given I go to "pickul.com/r/gonewild"
 		And I am at "age restriction confirmation"
-		When I press no confirming that I am not over 18
-		Then I am redirected to front page
-		
-	Scenario: NSFW subreddit - Revisit under 18
-		Given I am 17yo
-		When I revisit this subreddit
-		Then I will be redirected to "page restriction confirmation" page
-		
+		When I click at the 'no' button
+		Then I am at 'front page' # need real url
+			
 	Scenario: NSFW subreddit - Revisit 18 and over
 		Given I am 19yo
 		When I revisit this subreddit

@@ -9,6 +9,7 @@ Feature: Accessibility
   Scenario: Login as a user to pickul.com
     When I log in as 'lovelygentleman'
     Then I see "lovelygentleman" in 'userbar'
+    And I see "logout" in 'userbar'
 
 	Scenario: Non-NSFW subreddit - Navigating Subreddit
 		When I enter "pickul.com/r/reddit_test3"
@@ -22,14 +23,14 @@ Feature: Accessibility
 	Scenario: Non-NSFW subreddit - Subscribe subreddit
 		Given I am on 'an unsubscribed subreddit page'
     And I see 'subscribe'
-		When I click a link named 'subscribe'
+		When I click a link 'subscribe'
 		Then this subreddit will show up on my subscription page
 		And the label will change to unsubscribe
 		
 	Scenario: private subreddit - w/o access
 		Given I do not have permission to "pickul.com/r/pickulstaff"
 		When I enter the link of private subreddit
-		Then I will be prompt with "this subreddit is private" page
+		Then I see "this subreddit is private"
 	
 	Scenario: private subreddit - w/ access
 		Given I have permission to "pickul.com/r/pickulstaff"

@@ -7,9 +7,7 @@ Feature: Accessibility
 		Given I am a Registered User
     
   Scenario: Login as a user to pickul.com
-    Given I enter '#username' with "lovelygentleman" # need to find a real DOM's selector
-    And I enter '#password' with "lovelygentleman" # need to find a real DOM's selector
-    When I click at button labeled '#login' # need to find a real DOM's selector
+    When I log in as 'lovelygentleman'
     Then I see "lovelygentleman" in 'userbar'
 
 	Scenario: Non-NSFW subreddit - Navigating Subreddit
@@ -22,8 +20,9 @@ Feature: Accessibility
 		Then I should be directed to message mod page
 		
 	Scenario: Non-NSFW subreddit - Subscribe subreddit
-		Given I am on an unsubscribed subreddit page
-		When I pressed subscribe
+		Given I am on 'an unsubscribed subreddit page'
+    And I see 'subscribe'
+		When I click a link named 'subscribe'
 		Then this subreddit will show up on my subscription page
 		And the label will change to unsubscribe
 		

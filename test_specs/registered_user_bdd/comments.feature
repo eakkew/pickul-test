@@ -4,8 +4,8 @@ Feature: Comments
 	I want to comment on links and text post
 	
 	Scenario: comments
-		Given I am a registered user
-		And I am in a discussion section
-		And I typed my discussion with "hello world"
-		When clicked submit
-		Then I should see that my comment is in the comment section of the post
+		Given I log in as 'lovelygentleman'
+		And I go to 'http://reddit.local/r/reddit_test3/comments/2/httpgooglecomq207659570625/'
+		And I fill 'form#form-t6_262y textarea[name="text"]' with "hello world"
+		When I click at the 'save' button
+		Then I see "hello world" in 'div.sitetable.nestedlisting'

@@ -13,9 +13,10 @@ Feature: Accessibility
     Then I see "lovelygentleman" in 'userbar'
 
 	Scenario: Non-NSFW subreddit - Navigating Subreddit
-		When I enter "pickul.com/r/pickul"
+		When I enter "pickul.com/r/reddit_test3"
 		Then I can see the contents in that subreddit
-		
+	
+  # the messaging feature will not able to complete unless the subpickul is created by user
 	Scenario: Non-NSFW subreddit - Messaging Moderator
 		When I click 'message the moderators'
 		Then I should be directed to message mod page

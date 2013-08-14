@@ -21,33 +21,31 @@ Feature: Accessibility
 		Then I should be directed to message mod page
 		
 	Scenario: Non-NSFW subreddit - Subscribe subreddit
-		Given I am on 'an unsubscribed subreddit page'
+		Given I go to 'an unsubscribed subreddit page'
     And I see 'subscribe'
 		When I click a link 'subscribe'
 		Then this subreddit will show up on my subscription page
 		And the label will change to unsubscribe
 		
-	Scenario: private subreddit - w/o access
-		Given I do not have permission to "pickul.com/r/pickulstaff"
+	Scenario: private subreddit - with out access
+		Given I go to "pickul.com/r/pickulstaff"
 		When I enter the link of private subreddit
 		Then I see "this subreddit is private"
 	
-	Scenario: private subreddit - w/ access
-		Given I have permission to "pickul.com/r/pickulstaff"
+	Scenario: private subreddit - with access
+		Given I go to "pickul.com/r/pickulstaff"
 		When I enter the link of private subreddit
 		Then I can see the contents in this subreddit
 	
 	Scenario: NSFW subreddit - Age 18 and over
-		Given I am 19yo
-		And I navigate to "pickul.com/r/gonewild"
+		Given I go to "pickul.com/r/gonewild"
 		And I am redirected to "age restriction confirmation" page
 		When I press yes confirming that I am over 18 and over
 		Then I can see the contents in that subreddit
 	
 	Scenario: NSFW subreddit - Age under 18
-		Given I am 17yo
-		And I navigate to "pickul.com/r/gonewild"
-		And I am redirected to "age restriction confirmation" page
+		Given I go to "pickul.com/r/gonewild"
+		And I am at "age restriction confirmation"
 		When I press no confirming that I am not over 18
 		Then I am redirected to front page
 		

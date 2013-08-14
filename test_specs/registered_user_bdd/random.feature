@@ -1,4 +1,4 @@
-Feature: /random
+Feature: random
 	In order to discover new contents
 	As a Registered user
 	I want access to random subreddit

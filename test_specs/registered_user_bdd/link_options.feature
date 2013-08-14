@@ -8,17 +8,22 @@ Feature: Link Options
 		And I am on a discussion page
 	
 	Scenario: Save a link
-		When I press save on a link
-		Then Pickul should remember the link in my "saved" page
+		When I click at the 'save' link
+		Then I see 'unsave'
+    And Pickul should remember the link in my "saved" page
 		
 	Scenario: Share a link
-		When I press share on a link
-		Then Pickul should pop-up me to enter email or Pickul username
+		When I click at the 'share' link
+#		Then Pickul should pop-up me to enter email or Pickul username # this will happen when u are not logged in
+    Then I see 'cancel' link 
+    And I see '.sharelink' form
 		
-	Scenario: Report a link
-		When I press report on a link
-		Then Pickul should prompt me again if I am sure
-		And #todo: cross check with our own pickul server for further instruction
+	Scenario: Report spam someone's comment
+		When I click at the 'spam' link
+    And I see 'are you sure?'
+    And I click at the 'yes' button
+		Then I see 'spammed'
+    # And #todo: cross check with our own pickul server for further instruction
 		
 	Scenario: Hide a link
 		When I press hide on a link

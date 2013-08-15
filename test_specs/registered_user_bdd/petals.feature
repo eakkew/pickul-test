@@ -12,7 +12,7 @@ Feature: Petals
 		Then I am on "create subreddit" # fix this url
 	
 	Scenario: Filled out Create Subreddit
-		Given I am in create subreddit page
+		Given I am on 'create subreddit' page
 		And I fill input_id 'name_textbox' with "testpickul"
 		And I fill input_id 'title_textbox' with "welcome to test pickul"
 		And I fill input_id 'description_textbox' with "this is a test pickul"

@@ -15,13 +15,13 @@ Feature: Default Pickul
 	Scenario: Default subreddit from link
 		Given I have not subscribe to any subreddit
 		And I am in other pickul room besides front page
-		When I click FRONT link
+		When I click 'FRONT' link
 		Then I can only see links from default subreddit
 		And I cannot see links from non-default subreddit
 		
 	Scenario: Subscribe subreddit
 		Given I am on กลีบพิืกุล "newpickulroom" 
-		When I subscribe that กลีบพิกุล
+		When I click 'subscribe' link
 		Then I can see links from that subreddit when I return to my front page
 		
 	Scenario: Customize subscriptions

@@ -12,11 +12,11 @@ Feature: Petal Style
 	
 	Scenario: Style unchecked
 		Given I navigate to 'pickul.com/r/styletest'
-		When I unchecked the 'use subreddit style'
+		When I unchecked 'use subreddit style' checkbox
 		Then I should not see customized subreddit
 		
 	Scenario: Style unchecked revisited
 		Given I navigate to 'pickul.com/r/styletest'
-		And I unchecked the 'use subreddit style'
+		And I unchecked 'use subreddit style' checkbox
 		When I reopen my browser
 		Then I should not see customized subreddit

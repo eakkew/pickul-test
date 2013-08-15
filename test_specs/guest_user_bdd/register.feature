@@ -7,19 +7,19 @@ Feature: Create a new Account
 		Given I am a guest user
 	
 	Scenario: Register without remember me
-		Given I put 'user1' into a username text box
-		And I put 'youknowwhenyouseeit' into a password text box
-		And I put 'youknowwhenyouseeit' into a verify password text box
-		And I do not check remember me box
-		And I put captcha word correctly
-		When I press create account
+		Given I fill input_id 'username' with 'user1'
+		And I fill input_id 'password_text_box' with 'youknowwhenyouseeit'
+		And I fill input_id 'verify_password_text_box' with 'youknowwhenyouseeit'
+		And I uncheck remember me box
+		And I fill input_id 'captcha_text_box' with '$captcha_word'
+		When I click 'create account' link
 		Then I am logged in automatically
 		
 	Scenario: Register with remember me
-		Given I put 'user1' into a username text box
-		And I put 'youknowwhenyouseeit' into a password text box
-		And I put 'youknowwhenyouseeit' into a verify password text box
+		Given I fill input_id 'username' with 'user1'
+		And I fill input_id 'password_text_box' with 'youknowwhenyouseeit'
+		And I fill input_id 'verify_password_text_box' with 'youknowwhenyouseeit'
 		And I check remember me box
-		And I put captcha word correctly
-		When I press create account
+		And I fill input_id 'captcha_text_box' with '$captcha_word'
+		When I click 'create account' link
 		Then I am logged in automatically

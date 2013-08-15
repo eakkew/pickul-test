@@ -7,9 +7,9 @@ Feature: Submissions
 		Given I am a guest user
 	
 	Scenario: Submit a new link
-		When I press submit a new link
+		When I click 'submit a new link' link
 		Then I should be directed to login page
 	
 	Scenario: Submit a new text post
-		When I press submit a new text post link
+		When I click 'submit a new text post link' link
 		Then I should be directed to login page

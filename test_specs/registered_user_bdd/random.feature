@@ -6,4 +6,4 @@ Feature: random
 	Scenario: Random
 		Given I am a Registered user
 		When I click at the 'RANDOM' link
-		Then I should be directed to a random subreddit # error NotFound: Subreddit reddit.com
+		Then I am on "pickul.com/r/$anysubreddit" # error NotFound: Subreddit reddit.com

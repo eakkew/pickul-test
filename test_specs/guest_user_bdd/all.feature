@@ -6,4 +6,4 @@ Feature: all
 	Scenario: All
 		Given I am a guest user
 		When I click at 'ALL' link
-		Then I should be directed to /r/all subreddit
+		Then I am on "pickul.com/r/all'

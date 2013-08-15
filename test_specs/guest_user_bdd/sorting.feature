@@ -5,7 +5,7 @@ Feature: Sorting
 	
 	Background:
 		Given I am a guest user
-		And I am on front page
+		And I enter 'pickul.com'
 	
 	Scenario: Hot
 		When I select sorting content to 'hot'
@@ -28,6 +28,6 @@ Feature: Sorting
 		Then I should see the contents sorted by the new contents that are getting scorings
 	
 	Scenario: Best
-		Given I navigate to 'pickul.com/r/testroom'
+		Given I go to 'pickul.com/r/testroom'
 		When I select sorting content to 'best'
 		Then I should see the comments sorted by the best comments first

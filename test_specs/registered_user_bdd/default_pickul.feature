@@ -14,7 +14,7 @@ Feature: Default Pickul
 		
 	Scenario: Default subreddit from link
 		Given I have not subscribe to any subreddit
-		And I am in other pickul room besides front page
+		And I am on "pickul.com/r/news"
 		When I click 'FRONT' link
 		Then I can only see links from default subreddit
 		And I cannot see links from non-default subreddit

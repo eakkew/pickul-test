@@ -7,11 +7,12 @@ Feature: Petal Style
 		Given I am a guest user
 	
 	Scenario: Default
-		When I enter subreddit for the fist time
+		Given I am a first time user
+		When I go to 'pickul.com/r/styletest'
 		Then I should see customized subreddit
 	
 	Scenario: Style unchecked
-		Given I navigate to 'pickul.com/r/styletest'
+		Given I go to 'pickul.com/r/styletest'
 		When I unchecked 'use subreddit style' checkbox
 		Then I should not see customized subreddit
 		

@@ -5,5 +5,5 @@ Feature: r/all
 	
 	Scenario: All
 		Given I log in as 'lovelygentleman'
-		When I press 'ALL' link
+		When I click 'ALL' link
 		Then I am at 'http://pickul.com/r/all'

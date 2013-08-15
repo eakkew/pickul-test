@@ -6,10 +6,10 @@ Feature: Message
 	Scenario: Messaging Moderator
 		Given I am a guest user
 		When I click 'message the moderators' link
-		Then I am redirected to login page
+		Then I am on 'login' page
 	
 	Scenario: Messaging Users
 		Given I am a guest user
     		And I click 'lovelygentleman' link # I click a username link
 		When I click 'send message'
-		Then I am redirected to login page
+		Then I am on 'login' page

@@ -5,5 +5,5 @@ Feature: all
 	
 	Scenario: All
 		Given I am a guest user
-		When I press 'ALL' link
+		When I click at 'ALL' link
 		Then I should be directed to /r/all subreddit

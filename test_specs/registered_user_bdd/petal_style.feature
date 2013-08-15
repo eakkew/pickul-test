@@ -7,7 +7,8 @@ Feature: petal style
 		Given I am a Registered user
 	
 	Scenario: Default
-		When I enter subreddit for the fist time
+		Given I am a first time user
+		When I go to "pickul.com/r/styletest"
 		And that subreddit has custom style
 		Then I should see customized subreddit
 	

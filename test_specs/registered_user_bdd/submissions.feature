@@ -8,7 +8,7 @@ Feature: Submissions
 	
 	Scenario: test Submit a new link
 		When I click at 'submit a new link' link
-		Then I should be directed to submit a link page
+		Then I am on 'submit a link' page
 	
 	Scenario: Filling out new link details
 		Given I am on "Submit a new link" page
@@ -16,17 +16,17 @@ Feature: Submissions
 		And I fill input_id 'Url_textbox' with "beehive.asia"
 		And I fill input_id 'subreddit_textbox' with "politic"
 		When I click at 'submit' button
-		Then I should be directed to a link submission confirmation
+		Then I on a 'link submission confirmation' page
 		#todo: cross check with our own pickul server
 	
 	Scenario: test Submit a new text post link
 		When I click at 'submit a new text post' link
-		Then I should be directed to submit a new text post page
+		Then I am on 'submit a new text post' page
 		
 	Scenario: Filling out new text post details
 		Given I am on a "submit a new text post" page
 		And I fill input_id 'title with "Do you girls of Pickul enjoy playing rough during sex"
 		And I fill input_id 'choose a subreddit' with 'AskPickul'
 		When I click at 'submit' link
-		Then I should be directed to a text post submission confirmation
+		Then I on 'text post submission confirmation' page
 		#todo: cross check with our own pickul server

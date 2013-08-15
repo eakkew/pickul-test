@@ -6,4 +6,4 @@ Feature: random
 	Scenario: Random
 		Given I am a guest user
 		When I click at 'RANDOM' link
-		Then I should be directed to a random subreddit # error NotFound: Subreddit reddit.com
+		Then I am on 'reddit.com/r/$anysubreddit' # error NotFound: Subreddit reddit.com

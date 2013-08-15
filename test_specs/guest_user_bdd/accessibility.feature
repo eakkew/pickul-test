@@ -9,16 +9,16 @@ Feature: Accessibility
 	Scenario: NSFW subreddit - Age 18 and over
 		Given I am 19yo
 		And I navigate to "http://reddit.local/r/reddit_nsfw"
-		And I am redirected to "age restriction confirmation" page
+		And I am on "age restriction confirmation" page
 		When I click at 'yes' button
 		Then I can see the contents in that subreddit
 	
 	Scenario: NSFW subreddit - Age under 18
 		Given I am 17yo
-		And I navigate to "http://reddit.local/r/reddit_nsfw"
-		And I am redirected to "age restriction confirmation" page
+		And I go to "http://reddit.local/r/reddit_nsfw"
+		And I am on "age restriction confirmation" page
 		When I click at 'no' button
-		Then I am redirected to "front" page
+		Then I am on "front" page
 	
 	Scenario: private subreddit
 		Given I am a guest user

@@ -8,8 +8,8 @@ Feature: Submissions
 	
 	Scenario: Submit a new link
 		When I click 'submit a new link' link
-		Then I should be directed to login page
+		Then I am on 'login' page
 	
 	Scenario: Submit a new text post
 		When I click 'submit a new text post link' link
-		Then I should be directed to login page
+		Then I am on 'login' page

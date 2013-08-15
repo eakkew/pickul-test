@@ -12,6 +12,6 @@ Feature: Default subreddit
 		And I can not see links from non-default subreddit
 		
 	Scenario: Frontpage
-		When I press Front page link
+		When I click 'Front' link
 		Then I can see links from default subreddit
 		And I can not see links from non-default subreddit

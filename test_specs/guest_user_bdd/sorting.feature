@@ -9,25 +9,25 @@ Feature: Sorting
 	
 	Scenario: Hot
 		When I select sorting content to 'hot'
-		Then I should see the contents sorted by the combination of 'top' and 'new'
+		Then I see the comments
 		
 	Scenario: Top
 		When I select sorting content to 'top'
-		Then I should see the contents sorted by highest scoring submissions to Pickul and comments on submissions
+		Then I see the comments
 		
 	Scenario: New
 		When I select sorting content to 'new'
-		Then I should see the contents sorted by the most recent ones, regardless of their score
+		Then I see the comments
 		
 	Scenario: Controversial
 		When I select sorting content to 'controversial'
-		Then I should see the contents sorted by the most controversial scoring submissions and comments
+		Then I see the comments
 		
 	Scenario: Rising
 		When I select sorting content to 'rising'
-		Then I should see the contents sorted by the new contents that are getting scorings
+		Then I see the comments
 	
 	Scenario: Best
 		Given I go to 'pickul.com/r/testroom'
 		When I select sorting content to 'best'
-		Then I should see the comments sorted by the best comments first
+		Then I see the comments

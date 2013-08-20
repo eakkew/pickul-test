@@ -1,7 +1,7 @@
-Feature: petal style
-	In order to enable Subreddit Style by default
+Feature: Subpickul style
+	In order to enable Subpickul Style by default
 	As a Registered User
-	I want to see the subreddit with custom style
+	I want to see the Subpickul with custom style
 	
 	Background:
 		Given I am a Registered user
@@ -9,10 +9,10 @@ Feature: petal style
 	Scenario: Default
 		Given I am a first time user
 		When I go to "pickul.com/r/styletest"
-		And that subreddit has custom style
-		Then I should see customized subreddit
+		And that Subpickul has custom style
+		Then I see the custom css in 'styletest' subpickul
 	
 	Scenario: Style unchecked
 		Given I unchecked 'use subreddit style' checkbox
 		When I reopen my browser
-		Then I should not see customized subreddit
+		Then I see the custom css in 'styletest' subpickul

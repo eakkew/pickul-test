@@ -14,7 +14,7 @@ Feature: Link Options
 		
 	Scenario: Share a link
 		When I click at 'share' link
-#		Then Pickul should pop-up me to enter email or Pickul username # this will happen when u are not logged in
+		#Then Pickul should pop-up me to enter email or Pickul username # this will happen when u are not logged in
     		Then I see 'cancel' link 
     		And I see '.sharelink' form
 		
@@ -26,13 +26,13 @@ Feature: Link Options
     		# And #todo: cross check with our own pickul server for further instruction
 		
 	Scenario: Hide a link
-		When I click at 'hide' link
+		When I click at 'hide' link 'test_hide'
 		And I refresh this page
-		Then I will not see the link I just hide
+		Then I do not see 'test_hide' link
 
 	#todo: cross check with reddit for its behavior
 	Scenario: Hide a link with clean slate
 		Given I click at 'hide' link
 		And my session expired
 		When I reopen my browser
-		Then I will not see the link I just hide
+		Then I do not see 'test_hide' link

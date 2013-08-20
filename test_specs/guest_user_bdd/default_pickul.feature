@@ -8,8 +8,10 @@ Feature: Default subreddit
 	
 	Scenario: Default subreddit
 		When I enter Pickul homepage
-		Then I can only see links from default subreddit
+		Then I see link to "$default subrpickul room"
+		And I do not see link to "$non-default subrpickul room"
 		
 	Scenario: Frontpage
 		When I click 'Front' link
-		Then I can only see links from default subreddit
+		Then I see link to "$default subrpickul room"
+		And I do not see link to "$non-default subrpickul room"

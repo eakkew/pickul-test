@@ -33,6 +33,6 @@ Feature: Link Options
 	#todo: cross check with reddit for its behavior
 	Scenario: Hide a link with clean slate
 		Given I click at 'hide' link
-		And my session expired
+		And I wait for $int milliseconds
 		When I reopen my browser
 		Then I do not see 'test_hide' link

@@ -11,7 +11,7 @@ Feature: Accessibility
 		And I navigate to "http://reddit.local/r/reddit_nsfw"
 		And I am on "age restriction confirmation" page
 		When I click at 'yes' button
-		Then I can see the contents in that subreddit
+		Then I can see the contents
 	
 	Scenario: NSFW subreddit - Age under 18
 		Given I am 17yo
@@ -23,5 +23,5 @@ Feature: Accessibility
 	Scenario: private subreddit
 		Given I am a guest user
 		When I navigate to 'http://reddit.local/r/reddit_private'
-		Then I see with 'this subreddit is private' message 
+		Then I see 'this subreddit is private' in 'the page' 
 		# what is found from "http://reddit.local/r/reddit_private/" is a message "this subreddit is private" and another message from moderator

@@ -8,18 +8,19 @@ Feature: Votes
 	
 	Scenario: upvote a link
 		When I click at 'upvote' button
-		Then The button glowed orange as it says that I voted up this post
+		Then I see '$css_style_name' with '$value' on '$upvotebutton'
+
 	
 	Scenario: downvote a link
 		When I click at 'downvote' button
-		Then The button glowed orange as it says that I voted up this post
+		Then I see '$css_style_name' with '$value' on '$downvotebutton'
 	
 	Scenario: upvote a comment
 		Given I am in a post comment section
 		When I click at 'upvote' button
-		Then The button glowed orange as it says that I voted up this comment
+		Then I see '$css_style_name' with '$value' on '$upvotebutton'
 	
 	Scenario: downvote a comment
 		Given I am in a post comment section
 		When I click at 'downvote' button
-		Then The button glowed orange as it says that I voted up this comment
+		Then I see '$css_style_name' with '$value' on '$downvotebutton'

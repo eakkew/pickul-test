@@ -9,23 +9,24 @@ Feature: Default Pickul
 	Scenario: Default subreddit
 		Given I have not subscribe to any subreddit
 		When I go to 'http://www.pickul.com'
-		Then I can only see links from default subreddit
-		And I cannot see links from non-default subreddit
+		Then I see "$default subreddit" link
+		And I do not see "$non-default subreddit" link
 		
 	Scenario: Default subreddit from link
 		Given I have not subscribe to any subreddit
 		And I am on "pickul.com/r/news"
 		When I click 'FRONT' link
-		Then I can only see links from default subreddit
-		And I cannot see links from non-default subreddit
+		Then I see "$default subreddit" link
+		And I do not see "$non-default subreddit" link
 		
 	Scenario: Subscribe subreddit
 		Given I am on กลีบพิืกุล "newpickulroom" 
 		When I click 'subscribe' link
-		Then I can see links from that subreddit when I return to my front page
+		And I go to "pickul.com"
+		Then I see "$newpickulroom" link
 		
 	Scenario: Customize subscriptions
 		Given I am on "my subscription" page
 		And I have at least one subreddit subscribed
-		When I unsubcribe that subreddit
-		Then I cannot see that subreddit on "my subscription" page 
+		Then I see "$default subreddit" link
+		And I do not see "$non-default subreddit" link
